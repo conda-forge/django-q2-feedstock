@@ -1,5 +1,5 @@
 {% set name = "django-q2" %}
-{% set version = "1.7.3" %}
+{% set version = "1.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_q2-{{ version }}.tar.gz
-  sha256: 949e85fdc0aae9820bf9c10dc31e31cb05b21e8b919bf294221aa41c37030e25
+  sha256: 56a3781cc480474fa9c04bbde62445b0a9b4195adc409bd963b8f593b0598c43
 
 build:
   noarch: python
