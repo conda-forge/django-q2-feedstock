@@ -1,5 +1,5 @@
 {% set name = "django-q2" %}
-{% set version = "1.7.4" %}
+{% set version = "1.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_q2-{{ version }}.tar.gz
-  sha256: 56a3781cc480474fa9c04bbde62445b0a9b4195adc409bd963b8f593b0598c43
+  sha256: 5210b121573cf65b97d495dbebefe6cfac394d8c0aec9ca2117e8e56e2fda17d
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }}
     - django >=4.2,<6
     - django-picklefield >=3.1.0,<4.0.0
     - importlib-metadata >=3.6
@@ -45,6 +45,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/django-q2/django-q2
