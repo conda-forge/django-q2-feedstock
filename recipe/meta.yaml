@@ -21,9 +21,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - django >=4.2,<6
+    - django >=4.2
     - django-picklefield >=3.1.0,<4.0.0
-    - importlib-metadata >=3.6
   run_constrained:
     - blessed >=1.19.1,<2.0.0
     - hiredis >=2.0.0,<3.0.0
