@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: A multiprocessing distributed task queue for Django
 
-Documentation: https://django-q2.readthedocs.org
+Documentation: https://django-q2.readthedocs.org/
 
 Current build status
 ====================
