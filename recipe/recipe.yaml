@@ -45,7 +45,9 @@ tests:
       imports:
         - django_q
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A multiprocessing distributed task queue for Django
