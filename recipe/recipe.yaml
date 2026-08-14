@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: django-q2
-  version: "1.10.0"
+  version: "1.11.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/django_q2-${{ version }}.tar.gz
-  sha256: cc805008986c560ed4e0a3ef08776c1b41f403a60477b2726a2545ae64b71504
+  sha256: e742fe73f311d7693435916526dcfe1ec5e44f4511530afc0d6f731708045bbd
 
 build:
   number: 0
@@ -20,25 +20,12 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - poetry-core >=1.0.0
+    - uv-build >=0.10.7,<=0.12.1
     - pip
   run:
     - python >=${{ python_min }}
-    - django >=4.2
+    - django >=5.2
     - django-picklefield >=3.1.0,<4.0.0
-  run_constraints:
-    - blessed >=1.19.1,<2.0.0
-    - hiredis >=2.0.0,<3.0.0
-    - psutil >=5.9.2,<6.0.0
-    - django-redis >=5.2.0,<6.0.0
-    - iron-mq >=0.9.0,<0.10.0
-    - boto3 >=1.24.92,<2.0.0
-    - pymongo >=4.2.0,<5.0.0
-    - croniter >=2.0.1,<3.0.0
-    - django-q-rollbar >=0.1
-    - django-q-sentry >=0.1
-    - redis-py >=4.3.4,<5.0.0
-    - setproctitle >=1.3.2,<2.0.0
 
 tests:
   - python:
