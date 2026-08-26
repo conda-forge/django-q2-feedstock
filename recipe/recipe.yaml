@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: django-q2
-  version: "1.11.0"
+  version: "1.11.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/django_q2-${{ version }}.tar.gz
-  sha256: e742fe73f311d7693435916526dcfe1ec5e44f4511530afc0d6f731708045bbd
+  sha256: 640caf961f9098f26e00a22b743c4eb63da681a5390829b1ed951db677866e67
 
 build:
   number: 0
